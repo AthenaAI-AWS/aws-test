@@ -1,0 +1,68 @@
+.App-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  position: fixed;
+  width: 100%;
+  padding: 25px;
+  height: fit-content;
+  top: 0;
+  left: 0;
+  transition: background-color 0.3s;
+  z-index: 1000; /* Ensure the header is above other content */
+}
+
+.App-header.transparent {
+  background-color: transparent;
+  color: aliceblue;
+}
+
+.App-header.scrolled {
+  background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent background color */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  color: black;
+}
+
+.nav-icon-link {
+  text-decoration: none; /* Removes underline from the link */
+  font-weight: 700;
+  color: inherit; /* Inherits the color from the parent */
+}
+
+.nav-icon {
+  display: flex;
+  align-items: center; /* Aligns items vertically in the center */
+}
+
+.nav-icon-img {
+  max-width: 50px; /* Adjust the width as needed */
+  height: auto; /* Maintains aspect ratio */
+  margin-right: 10px; /* Space between image and text */
+}
+
+nav a {
+  color: inherit;
+  margin: 0 10px;
+  text-decoration: none;
+  font-size: 13px;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+.menu-icon {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+/* Specific style for the Contact page */
+.contact-header nav a,
+.contact-header .nav-icon-link {
+  color: black;
+}

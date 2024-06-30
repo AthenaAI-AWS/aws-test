@@ -1,0 +1,105 @@
+.main-home {
+    display: flex;
+    flex-direction: column;
+}
+
+.home-intro {
+    background-image: url("../../assets/homepage.png");
+    background-size: cover;
+    background-position: 50%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    color: aliceblue;
+    text-align: center;
+}
+
+.home-intro-title h1 {
+    font-size: 45px;
+}
+
+.reason {
+    background-image: url("https://www.awsys-i.com/res/wave.webp");
+    background-size: cover;
+    background-position: 50%;
+    padding: 40px;
+    margin-top: 30px;
+}
+
+.reason-upper,
+.reason-lower {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.reason-upper img,
+.reason-lower img {
+    width: 100%;
+    height: auto;
+    margin-top: 20px;
+}
+
+/* Media query for larger screens */
+@media (min-width: 768px) {
+  .reason-upper,
+  .reason-lower {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+  }
+
+  .reason-upper-text,
+  .reason-lower-text {
+    flex: 1;
+    padding: 20px;
+  }
+
+  .reason-upper img,
+  .reason-lower img {
+    max-width: 50%;
+    margin: 0 20px;
+    flex: 1;
+  }
+}
+
+/* Text Style */
+.halftitle {
+    color: #0F76A0;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.treason {
+    font-size: 25px;
+    font-weight: 600;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0px;
+    margin-bottom: 35px;
+    display: block;
+    color: #51a7fa;
+    text-align: center;
+}
+
+.halfmaintitle {
+    color: black;
+    font-weight: 500;
+    font-size: 40px;
+    font-family: 'Open Sans', sans-serif;
+    line-height: normal;
+}
+
+.halftcontext {
+    text-align: justify;
+    font-size: 20px;
+    font-weight: 400;
+    color:#484747;
+}

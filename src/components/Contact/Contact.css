@@ -1,0 +1,114 @@
+.App-header{
+    color: black;
+}
+.contact-body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+}
+
+.contact-newbusiness-container{
+    display: flex;
+    flex-direction: column;
+    margin-right: 80px;
+    align-self: flex-end;
+    justify-content: end;
+}
+
+.business-wrap p{
+    color: rgb(100, 94, 94);
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+.business-wrap h3,
+.careers-wrap h3{
+    font-size: 15px;
+    font-weight: bold;
+    color: rgb(20, 83, 134);
+}
+
+.global-wrap{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    cursor: pointer;
+}
+
+.global-wrap p{
+    color: #5770a1;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.global-wrap p:hover{
+    color: #0c0f14;
+}
+
+.contact-mapph{
+    background-image: url('https://www.awsys-i.com/res/contacts-banner-local.webp');
+    background-size: cover;
+    background-position: 50%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    top: 0;
+    left: 0;
+    max-width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-content: center;
+}
+
+.contact-awsys{
+    background-image: url('../../assets/skyline.png');
+    background-size: cover;
+    background-position: 50%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding-left: 75px;
+    max-width: 100vw;
+    height: fit-content;
+    justify-content: center;
+    align-content: center;
+    color: white;
+}
+
+.contact-awsol{
+    background-image: url('../../assets/skyline2.png');
+    background-size: cover;
+    background-position: 50%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding-left: 75px;
+    max-width: 100vw;
+    height: fit-content;
+    justify-content: center;
+    align-content: center;
+    color: white;
+}
+
+.contact-offices{
+    background-color: #282c34;
+    color: aliceblue;
+    width: inherit;
+    height: 125px;
+    font-size: 20px;
+    text-align: center;
+    align-content: center;
+}
+
+.icon-text {
+    display: flex;
+    align-items: center;
+    margin: 5px 0;
+}
+
+.icon-text p {
+    margin-left: 30px;
+}
