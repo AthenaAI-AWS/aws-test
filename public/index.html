@@ -15,6 +15,18 @@
       user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
     -->
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <link rel="stylesheet" type="text/css" href="https://proud-ground-02578ac00.5.azurestaticapps.net/style.css">
+    <script src="https://proud-ground-02578ac00.5.azurestaticapps.net/chatbot.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.botframework.com/botframework-webchat/latest/webchat.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var chatIcon = document.getElementById('chat-icon');
+            var chatbot = new Athena(chatIcon, {
+                token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NWYxNDMwYzJlNjc3M2ViZTkyMTc3MWQiLCJpYXQiOjE3MTgzNTY4NzgsImV4cCI6MTc0OTg5Mjg3OH0.ioSvVrLEEf39-EFqY3rC1961-wWOmqg3Rw4TTasrjJ4'
+            });
+        });
+    </script>
     <!--
       Notice the use of %PUBLIC_URL% in the tags above.
       It will be replaced with the URL of the `public` folder during the build.
@@ -27,6 +39,8 @@
     <title>Advanced World Solutions Inc.</title>
   </head>
   <body>
+    <div id="chat-icon" class="chat-icon"> </div>
+    
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
     <!--
