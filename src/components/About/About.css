@@ -1,6 +1,11 @@
+.hello-body {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
 
 .about-intro {
-    background-image: url("https://www.awsys-i.com/res/profile-banner.png");
+    background-image: url("../../assets/profile-banner.png");
     background-size: cover;
     background-position: 50%;
     position: relative;
@@ -26,11 +31,12 @@
 .about-president {
     width: 100%;
     background-color: #ffffff;
-    padding: 40px 20px;
+    padding: 40px 80px;
     box-sizing: border-box;
 }
 
 .about-president-message {
+    padding: 40px;
     max-width: 1200px;
     margin: 0 auto;
     text-align: left;
@@ -41,17 +47,24 @@
     line-height: 1.6;
     color: #333;
     margin-bottom: 20px;
+    text-align: justify;
+    font-weight: 600;
 }
 
 .about-history {
-    width: 100%;
+    display: flex;
     background-color: #f5f5f5;
     padding: 40px 20px;
     box-sizing: border-box;
+    justify-content: center;
+    align-items: center;
+    height: 800px;
 }
 
 .about-history-box {
-    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     margin: 0 auto;
     text-align: center;
 }
@@ -65,48 +78,380 @@
 
 .about-history-timeline {
     display: flex;
-    justify-content: center;
+    flex-direction: row;
+    width: 100%;
+    max-width: 800px;
+    justify-content: space-evenly;
     align-items: center;
     margin-bottom: 20px;
     position: relative;
-  }
-  
-  .year {
+}
+
+.about-history-years {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.year {
     padding: 10px;
     margin: 0 5px;
     cursor: pointer;
     color: #333;
-  }
-  
-  .year.empty {
+    position: relative;
+}
+
+.year::after {
+    content: "";
+    display: block;
+    width: 10px;
+    height: 10px;
+    border: 2px solid red;
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+
+.year::before {
+    content: "";
+    display: block;
+    height: 4px;
+    width: 300px; /* Adjusted width for smaller screens */
+    background-color:  #005baa;
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.year.empty {
     visibility: hidden;
-  }
+}
 
 .left-arrow-circle-btn,
 .right-arrow-circle-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 24px;
     height: 24px;
     background-color: hidden;
     border-style: solid;
     border-width: 2px;
-    border-color: aqua;
+    border-color: #005baa;
     border-radius: 50%;
     margin: 0 10px;
     cursor: pointer;
 }
 
 .about-history-description {
+    padding: 100px;
     text-align: left;
+    width: 700px;
 }
 
 .about-history-description h1 {
-    font-size: 24px;
-    font-weight: 600;
-    color: #333;
-    margin-bottom: 10px;
+    font-size: 3em !important;
+    font-weight: 700;
+    line-height: 1.2;
+    color: #005baa;
 }
 
 .about-history-description p {
-    font-size: 18px;
-    color: #333;
+    font-size: 1.2em !important;
+    color: #000;
+}
+
+/* Responsive Design for Mobile Devices */
+@media (max-width: 768px) {
+    .about-intro-text {
+        padding: 50px;
+        min-width: 90vw;
+    }
+
+    .about-president {
+        padding: 20px;
+    }
+
+    .about-president-message p {
+        font-size: 16px;
+    }
+
+    .about-history {
+        padding: 20px;
+    }
+
+    .about-history-box h2 {
+        font-size: 24px;
+    }
+
+    .about-history-timeline {
+        width: 100%;
+    }
+
+    .about-history-years {
+        width: 100%;
+    }
+
+    .year::before {
+        width: 80px; /* Adjusted width for smaller screens */
+    }
+
+    .about-history-description h1 {
+        font-size: 1.5em; /* Adjusted font size for smaller screens */
+    }
+
+    .about-history-description p {
+        font-size: 0.9em; /* Adjusted font size for smaller screens */
+    }
+}
+
+/* Responsive Design for Smaller Devices */
+@media (max-width: 480px) {
+    .about-intro-text {
+        padding: 30px;
+        min-width: 100vw;
+    }
+
+    .about-president {
+        padding: 10px;
+    }
+
+    .about-president-message p {
+        font-size: 14px;
+    }
+
+    .about-history {
+        padding: 10px;
+    }
+
+    .about-history-box h2 {
+        font-size: 20px;
+    }
+
+
+    .year::before {
+        width: 60px; /* Adjusted width for smaller screens */
+    }
+
+    .about-history-description h1 {
+        font-size: 1.2em; /* Adjusted font size for smaller screens */
+    }
+
+    .about-history-description p {
+        font-size: 0.8em; /* Adjusted font size for smaller screens */
+    }
+}
+
+.about-company{
+    width: 100%;
+    background: linear-gradient(to bottom, #66a1e4 0, #22b8bf 100%);
+    padding-top: 3em;
+    padding-bottom: 10em;
+    overflow: hidden;
+}
+
+.about-company-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 5rem;
+}
+
+.about-company-content h1{
+    width: 100%;
+    font-size: 4em;
+    font-weight: 660;
+    font-family: 'Open Sans', sans-serif;
+    color: #fff;
+    text-align: center;
+}
+
+.about-company-content-row{
+    display: flex;
+    flex-direction: row;
+    column-gap: 10rem;
+    align-items: center;
+}
+
+.about-company-content-container{
+    flex-direction: column;
+    text-align: center;
+    
+}
+
+.about-company-content-container h2{
+    padding-top: 0.2em;
+    color: #fff;
+    font-weight: bolder;
+    font-size: 3.5em;
+    margin: 0;
+}
+
+.about-company-content-container h3{
+    color: #fff;
+    font-family: 'Open Sans', sans-serif;
+    padding-top: 0.2em;
+    font-size: 1.25em;
+    line-height: 20px;
+    font-weight: 100;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.about-company-content-container img{
+    width: 240px;
+    height: 240px;
+}
+
+.company-profile-btn{
+    display: inline-block;
+    padding: 30px 60px;
+    border: 5px solid #ffffff;
+    border-radius: 8px;
+    transition: all 0.2s ease-in;
+    position: relative;
+    overflow: hidden;
+    font-size: 30px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+    z-index: 1;
+    background-color: transparent;
+    margin-top: 30px;
+    cursor: pointer;
+}
+
+.company-profile-btn:hover{
+    background-color: white;
+    color: #22b8bf;
+}
+/*VISION*/
+.about-vision{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    border-width: 0;
+    border-bottom-width: 3px;
+    border-color: #8c8b88;
+    border-style: dashed;
+    max-height: 32em;
+    padding-top: 6em;
+    padding-bottom: 6em;
+    background: #fff;
+    overflow: hidden;
+}
+
+.about-vision h2{
+    padding: 0 3%;
+    text-align: left;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 3em;
+    font-weight: bolder;
+    color: #8c8b88;
+    margin: 0;
+}
+
+.about-vision h1{
+    padding: 0 3%;
+    line-height: 1em;
+    text-align: left;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+    font-size: 3.5em;
+    color: #005baa;
+    margin: 5px 0;
+    text-overflow: clip;
+}
+.about-vision-img-container{
+    max-width: 40%;
+}
+
+.about-vision-img{
+    position: relative;
+    bottom: 10em;
+    left: 14em;
+}
+
+.about-vision-row{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: 20px;
+    padding-left: 90px;
+}
+
+.about-vision-text{
+    padding: 30px;
+    padding-top: 20px;
+    width: 60%;
+}
+
+.about-vision-row-img{
+    height: 12em;
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+}
+
+/*MISSION*/
+
+.about-mission{
+    background: #eee;
+    width: 100%;
+    display: block;
+    padding-top: 4em;
+    padding-bottom: 5em;
+    font-size: 1.3em;
+}
+
+.about-mission-text{
+    padding: 0 3%;
+    width: 100%;
+    display: inline-block;
+    text-align: left;
+    font-size: 2em;
+    font-weight: bolder;
+    color: #000;
+}
+
+.about-mission-context{
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 13%;
+    width: 100%;
+    display: inline-block;
+    text-align: left;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.5em;
+    font-weight: bolder;
+    color: #282828;
+    margin-top: 1em;
+}
+
+.about-mission-list {
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 13%;
+    display: block;
+    width: 100%;
+    display: inline-block;
+    text-align: left;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.2em;
+    font-weight: bolder;
+    color: #282828;
+    margin-top: 1em;
+}
+
+.check-icon{
+    color: #005baa;
+    margin-right: 10px;
 }
