@@ -1,4 +1,5 @@
-.about-intro{
+
+.about-intro {
     background-image: url("https://www.awsys-i.com/res/profile-banner.png");
     background-size: cover;
     background-position: 50%;
@@ -10,13 +11,102 @@
     width: 100vw;
     height: 100vh;
     justify-content: center;
-    align-content: center;
+    align-items: center;
     color: aliceblue;
 }
 
-.about-intro-text{
+.about-intro-text {
     text-align: center;
     min-width: 60vw;
     padding: 100px;
     justify-content: center;
+    /*background: rgba(0, 0, 0, 0.5); /* Optional: to make text more readable over the background */
+}
+
+.about-president {
+    width: 100%;
+    background-color: #ffffff;
+    padding: 40px 20px;
+    box-sizing: border-box;
+}
+
+.about-president-message {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.about-president-message p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.about-history {
+    width: 100%;
+    background-color: #f5f5f5;
+    padding: 40px 20px;
+    box-sizing: border-box;
+}
+
+.about-history-box {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.about-history-box h2 {
+    font-size: 28px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.about-history-timeline {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    position: relative;
+  }
+  
+  .year {
+    padding: 10px;
+    margin: 0 5px;
+    cursor: pointer;
+    color: #333;
+  }
+  
+  .year.empty {
+    visibility: hidden;
+  }
+
+.left-arrow-circle-btn,
+.right-arrow-circle-btn {
+    width: 24px;
+    height: 24px;
+    background-color: hidden;
+    border-style: solid;
+    border-width: 2px;
+    border-color: aqua;
+    border-radius: 50%;
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+.about-history-description {
+    text-align: left;
+}
+
+.about-history-description h1 {
+    font-size: 24px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.about-history-description p {
+    font-size: 18px;
+    color: #333;
 }
