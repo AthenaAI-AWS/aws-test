@@ -39,6 +39,7 @@ function Header() {
         
         <Link to="/about">ABOUT</Link>
         <Link to="/servicesandsolutions">SERVICES & SOLUTIONS</Link>
+        <Link to="/careers">CAREERS</Link>
         <Link to="/contact">CONTACT</Link>
       </nav>
       <MenuIcon className='menu-icon'></MenuIcon>

@@ -1,0 +1,310 @@
+.career-body {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.career-intro {
+    background-image: url("../../assets/collage2.png");
+    background-size: cover;
+    background-position: 50%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    color: aliceblue;
+}
+
+.career-intro-text {
+    text-align: center;
+    min-width: 60vw;
+    padding: 100px;
+    justify-content: center; 
+    align-items: center;
+}
+
+.career-intro-text h1{
+    font-size: 5.5em;
+    font-weight: 600;
+    color: #fff;
+    padding-bottom: .3em;
+    margin-bottom: 0.1em;
+}
+
+.career-intro-text h2 {
+    line-height: 1.5em;
+    font-weight: 550;
+    font-size: 2em;
+    text-shadow: 2px 1px #0f0f0f;
+}
+
+.career-intro-text h3 {
+    padding: 0.6em 0 0;
+    margin: 0;
+    color: #fff;
+    font-weight: 700;
+    font-size: 3.5em;
+}
+
+.career-freshgrad .career-freshgrad-content{
+    padding: 4em 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.career-freshgrad-content h3{
+    font-size: 1.8em;
+    font-weight: 700;
+    width: 85%;
+    color: #282828;
+    margin: 0 auto;
+}
+
+.career-freshgrad-content p{
+    font-size: 1.4em;
+    padding-top: 1em;
+    padding-bottom: 3em;
+    line-height: 1.7em;
+    font-weight: 550;
+    display: block;
+    color: #282828;
+    margin: 0 auto;
+    width: 85%;
+}
+
+.career-freshgrad-text{
+    width: fit-content;
+    font-size: 2em;
+    margin-bottom: 2em;
+    font-weight: 550;
+    border: 1px solid #569bd3;
+    border-radius: 4em;
+    padding: .3em .8em;
+    background: #569bd3;
+    color: #fff;
+}
+
+.career-freshgrad-content img{
+    height: 530px;
+    box-shadow: 0 2px 5px 1px rgba(0, 0, 0, .26);
+    border: 0;
+    margin-bottom: 60px;
+}
+
+/* Added CSS for the arrow animation */
+@keyframes bounce {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  
+  .career-intro-text
+    .MuiSvgIcon-root  {
+    animation: bounce 2s ease-in-out infinite;
+    cursor: pointer;
+  }
+  
+  .career-freshgrad-content
+    .MuiSvgIcon-root {
+    animation: bounce 2s ease-in-out infinite;
+    cursor: pointer;
+  }
+
+  .career-experienced .career-experienced-content {
+    padding: 4em 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: transparent;
+}
+
+.career-experienced{
+    background: transparent;
+}
+
+.career-background{
+    box-sizing: border-box;
+    background: #013a6f;
+    height: 400px;
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+}
+
+.career-experienced-text {
+    width: fit-content;
+    font-size: 2em;
+    margin-bottom: 2em;
+    font-weight: 550;
+    border: 1px solid #569bd3;
+    border-radius: 1em;
+    padding: .3em .8em;
+    background: #fff;
+    color: #013a6f;
+}
+
+/* Accordion */
+.box-group {
+    background-color: #fff;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .26);
+    padding: 0;
+    width: 60%;
+    max-width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.box-main-title {
+    color: #013a6f;
+    font-weight: 700;
+    font-size: 2em;
+    line-height: 32px;
+    padding: 16px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+.panel-box {
+    background: rgb(255, 255, 255);
+    width: 100%;
+    padding: 16px;
+    border:none;
+    border-bottom: 1px solid #ddd;
+    margin: 0;
+    font-size: 16px;
+    color: inherit;
+    font-family: inherit;
+    font-weight: 500;
+    line-height: 1.1;
+    cursor: pointer;
+    transition: background 0.3s, color 0.3s;
+}
+
+.reminder{
+    font-size: 1.3em;
+    margin: 5em auto;
+    width: 85%;
+    line-height: 180%;
+    text-align: center;
+}
+
+/* Accordion Styles */
+.accordion {
+    width: 100%;
+}
+
+.accordion-body {
+    background-color: #333;
+    color: #ffffff;
+    padding: 16px;
+    border-bottom: 1px solid #ddd;
+    border-top: 1px solid #ddd;
+    display: none; /* Initially hide the body */
+    text-align: center;
+}
+
+.accordion:not(.accordion--open) .accordion-body {
+    display: none; /* Hide the body if the accordion is not open */
+}
+
+.accordion:not(.accordion--open) .panel-box {
+    background: #ffffff;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+}
+
+.accordion.accordion--open .accordion-body {
+    display: block; /* Show the body if the accordion is open */
+}
+
+.accordion.accordion--open .panel-box {
+    background: #333;
+    color: #fdfdfd;
+    font-weight: bold;
+}
+
+/* Accordion Content */
+.contact-us{
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 500px;
+    padding: 5px 15px;
+    text-transform: uppercase;
+    line-height: 1.5;
+    border-radius: 3px;
+    color: #fff;
+    background-color: #5cb85c;
+    border-color: #4cae4c;
+}
+
+.car-loc {
+    text-align: left;
+    padding: 16px;
+}
+
+.loc-heading {
+    font-weight: 700;
+    font-size: 1.2em;
+}
+
+.loc-cont {
+    font-size: 1em;
+    padding-top: 8px;
+}
+
+.car-dnr, .car-rqmt {
+    text-align: left;
+    padding: 16px;
+}
+
+.dnr-heading, .rqmt-heading {
+    font-size: 19px;
+    font-weight: bolder;
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.dnr-cont ul, .rqmt-cont ul {
+    list-style-type: decimal;
+    padding-left: 20px;
+}
+
+.dnr-cont ol, .rqmt-cont ol {
+    list-style-type: circle;
+    padding-left: 20px;
+}
+
+.dnr-cont li, .rqmt-cont li {
+    padding-top: 8px;
+    font-size: 1em;
+    margin: 1em 0;
+    font-size: 14px;
+    margin-bottom: 30px;
+    font-weight: 550;
+}
+
+/* Horizontal Rule Style */
+.style-two {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, .75), rgba(255, 255, 255, 0));
+}
