@@ -3,6 +3,7 @@ import './About.css';
 import KeyboardArrowLeftRoundedIcon from '@mui/icons-material/KeyboardArrowLeftRounded';
 import KeyboardArrowRightRoundedIcon from '@mui/icons-material/KeyboardArrowRightRounded';
 import CheckIcon from '@mui/icons-material/Check';
+import { useTranslation } from 'react-i18next';
 
 const events = {
   1993: "Established as APTi-Philippines, Inc., the Research and Development (R&D) arm of Advanced Peripherals Technologies, Inc. (APTi) of Japan (a joint venture between IBM Japan and Toshiba TEC Corp.). The main business was development of firmware, microcode, device drivers, and software utilities for workstation printers and related peripherals.",
@@ -27,6 +28,7 @@ const years = Array.from({ length: 31 }, (_, i) => 1993 + i);
 const ITEMS_PER_PAGE = 12;
 
 function About() {
+  const {t} = useTranslation();
   const [selectedYear, setSelectedYear] = useState(years[0]);
   const [currentPage, setCurrentPage] = useState(0);
 
@@ -49,43 +51,23 @@ function About() {
     <div className='hello-body'>
       <div className='about-intro'>
         <div  className='about-intro-text'>
-          <h2>Welcome to the Advanced World Systems, Advanced World Solutions webpage,
-            trusted IT offshore leader engaged in consulting, technology, and outsourcing solutions.
-            We are part of the Ubicom group of companies operating in Japan, the Philippines, China, and USA.</h2>
+          <h2>{t('intro_msg')}</h2>
         </div>
       </div>
       <div className='about-president'>
         <div  className='about-president-message'>
+          <p>{t('pres1')}</p>
+          <p>{t('pres2')}</p>
+          <p>{t('pres3')}</p>
+          <p>{t('pres4')}<br/>{t('pres6')}</p>
           <p>
-            The Internet has revolutionized society beyond being able to access information given a device; both business and personal life are now heavily 
-            dependent on the Internet. In addition, AI, which has achieved significant advancements in recent years, has already had a greater impact on 
-            business and personal life than the Internet did when it was first introduced. In this rapidly changing world, continued reliability, stability, and 
-            responsiveness are becoming increasingly important factors in the delivery of various services.</p>
-          <p>
-            For more than 30 years, Advanced World Systems / Advanced World Solutions has been based in the Philippines. 
-            Anchored on our core philosophy of "Global IT Excellence", we have continuously improved our technology and our capabilities to provide a wide range of services to customers. 
-            We have focused on earning the trust not only of Japanese companies but also of multinational corporations by continuously improving our technical skills as we worked on 
-            various projects for our clients.</p>
-          <p>
-            We were established in the early 1990s as the Philippine-based offshore R&D division of a joint venture company between IBM Japan and Toshiba TEC, 
-            and we have steadily expanded our services and access to countries around the world. We provide high quality and high value services through 
-            our continuous efforts in software development and quality assurance – from firmware development, to standalone software applications, to business 
-            and mobile applications, to AI services and solutions.</p>
-          <p>
-            Hundreds of young bilingual engineers (capable in English and Japanese), with diverse technical skills who continuously acquire new skills while improving 
-            current capabilities,continue to be the driving force of our organization. Exposure to world-class clients, projects and business processes with global clients
-            in both onsite (customer’s site) and offshore contribute to achieving our core philosophy. Our recent efforts to work with clients to maximize the advantages of AI
-            to grow their businesses have helped us gain more skills and experiences which we know will help us become a partner of choice for global businesses. 
-            We will continue to challenge ourselves to remain competitive in an ever-changing connected world, discovering new ways to make people’s lives better through technology, 
-            contributing to a better society for all of humanity.</p>
-          <p>
-          <b>Katsumi Murayama</b><br/>
-          President and CEO</p>  
+          <b>{t('pres_name')}</b><br/>
+          {t('pres5')}</p>  
         </div>
       </div>
       <div className='about-history'>
         <div className='about-history-box'>
-          <h2>Our History</h2>
+          <h2>{t('history')}</h2>
           <div className='about-history-timeline'>
             <KeyboardArrowLeftRoundedIcon className='left-arrow-circle-btn' onClick={handlePreviousPage}/>
             <div className='about-history-years'>
@@ -97,38 +79,38 @@ function About() {
           </div>
           <div className='about-history-description'>
             <h1>{selectedYear}</h1>
-            <p>{events[selectedYear] || "No events for this year."}</p>
+            <p>{t(`events.${selectedYear}`)}</p>
           </div>
         </div>
       </div>
       <div className='about-company'>
         <div className='about-company-content'>
-          <h1>Where We are Now</h1>
+          <h1>{t('where_we')}</h1>
           <div className='about-company-content-row'>
             <div className='about-company-content-container'>
               <img alt="offices" src={require("../../assets/offices.png")}></img>
-              <h2>8</h2>
-              <h3>Offices</h3>
+              <h2>{t('offices_num')}</h2>
+              <h3>{t('offices')}</h3>
             </div>
             <div className='about-company-content-container'>
               <img alt="professionals" src={require("../../assets/professionals.png")}></img>
-              <h2>800+</h2>
-              <h3>Professionals</h3>
+              <h2>{t('professionals_num')}</h2>
+              <h3>{t('professionals')}</h3>
             </div>
             <div className='about-company-content-container'>
               <img alt="years" src={require("../../assets/experience.png")}></img>
-              <h2>30+</h2>
-              <h3>Years in the business</h3>
+              <h2>{t('yearsbus_num')}</h2>
+              <h3>{t('yearsbus')}</h3>
             </div>
           </div>
-          <button className='company-profile-btn'>View Company Profile</button>
+          <button className='company-profile-btn'>{t('view_com')}</button>
         </div>
       </div>
       <div className='about-vision'>
         <div className='about-vision-text' >
-          <h2>Our Vision:</h2>
-          <h1>GLOBAL IT EXCELLENCE</h1>
-          <h2>in</h2>
+          <h2>{t('vision')}</h2>
+          <h1>{t('global_IT')}</h1>
+          <h2>{t('in')}</h2>
           <div className='about-vision-row'>
             <div className='about-vision-row-contents' >
               <img alt="HumanResource" className='about-vision-row-img' src={require("../../assets/human-resource.png")}></img>
@@ -149,23 +131,23 @@ function About() {
         </div>
       </div>
       <div className='about-mission'>
-        <div className='about-mission-text'>Our Mission:</div>
-        <div className='about-mission-context'>AWS is an Information Technology company that commits to:</div>
+        <div className='about-mission-text'>{t('mission')}</div>
+        <div className='about-mission-context'>{t('mission_context')}</div>
         <div>
           <div className='about-mission-list'>
-            <CheckIcon className='check-icon' sx={{ fontSize: 40 }}/><span>Providing globally competitive products and services</span>
+            <CheckIcon className='check-icon' sx={{ fontSize: 40 }}/><span>{t('mission1')}</span>
           </div>
           <div className='about-mission-list'>
-            <CheckIcon className='check-icon' sx={{ fontSize: 40 }}/><span>Ensuring total customer satisfaction</span>
+            <CheckIcon className='check-icon' sx={{ fontSize: 40 }}/><span>{t('mission2')}</span>
           </div>
           <div className='about-mission-list'>
-            <CheckIcon className='check-icon' sx={{ fontSize: 40 }}/><span>Fully supporting employees' innovative aspirations </span>
+            <CheckIcon className='check-icon' sx={{ fontSize: 40 }}/><span>{t('mission3')}</span>
           </div>
           <div className='about-mission-list'>
-            <CheckIcon className='check-icon' sx={{ fontSize: 40 }}/><span>Delivering sustainable shareholder value</span>
+            <CheckIcon className='check-icon' sx={{ fontSize: 40 }}/><span>{t('mission4')}</span>
           </div>
           <div className='about-mission-list'>
-            <CheckIcon className='check-icon' sx={{ fontSize: 40 }} /><span>Contributing to the development of society</span>
+            <CheckIcon className='check-icon' sx={{ fontSize: 40 }} /><span>{t('mission5')}</span>
           </div>
         </div>
       </div>

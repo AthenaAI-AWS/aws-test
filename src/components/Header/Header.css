@@ -66,3 +66,20 @@ nav a:hover {
 .contact-header .nav-icon-link {
   color: black;
 }
+
+.language-toggle-button {
+  background-color: transparent; /* Blue background */
+  color: #fff; /* White text */
+  padding: 10px 20px; /* Padding for text */
+  border: 2px solid #f4f7f8; /* Remove default border */
+  border-radius: 25px; /* Rounded corners */
+  font-size: 12px; /* Text size */
+  font-weight: 600;
+  cursor: pointer; 
+  transition: ease-in-out 0.2s;
+}
+
+.language-toggle-button:hover {
+  background-color: white;
+  color: black;
+}
