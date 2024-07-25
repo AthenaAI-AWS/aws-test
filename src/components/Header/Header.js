@@ -50,7 +50,7 @@ function Header() {
         <Link to="/careers">{t('careers')}</Link>
         <Link to="/contact">{t('contact')}</Link>
       </nav>
-      <button onClick={toggleLanguage} className="language-toggle-button">
+      <button onClick={toggleLanguage} className={`language-toggle-button ${isScrolled ? 'scrolled' : 'transparent'}`}>
         {language === 'en' ? '日本語' : 'ENGLISH'}
       </button>
     </header>

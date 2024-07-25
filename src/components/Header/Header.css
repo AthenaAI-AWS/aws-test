@@ -83,3 +83,32 @@ nav a:hover {
   background-color: white;
   color: black;
 }
+
+.language-toggle-button.scrolled{
+  border: 2px solid #000000;
+  color: black;
+}
+
+@media screen and (max-width: 600px) {
+  .App-header {
+    max-height: 103px;
+
+  }
+
+  .nav-icon{
+    transform: scale(70%);
+  }
+
+  nav a {
+    font-size: 8px;
+  }
+
+  .nav-icon p{
+    font-size: 10px;
+  }
+
+  .language-toggle-button{
+    font-size: 8px;
+    transform: scale(70%);
+  }
+}
