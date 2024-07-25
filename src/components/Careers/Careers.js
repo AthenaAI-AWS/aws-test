@@ -3,9 +3,10 @@ import './Careers.css';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import { Disclosure, DisclosureButton, DisclosurePanel } from '@headlessui/react';
 import {jobData} from './jobData.js';
-
+import { useTranslation } from 'react-i18next';
 
 function Careers() {
+  const {t} = useTranslation();
   const [openIndex, setOpenIndex] = useState(null);
   const arrowRef = useRef(null);
   const freshGradRef = useRef(null);
@@ -25,13 +26,11 @@ function Careers() {
     <div className="career-body">
       <div className="career-intro">
         <div className="career-intro-text">
-          <h1>Our People</h1>
-          <h2>
-            Global IT Excellence is the basic principle upon which AWS is built.
-            <br />
-            But it’s our people who make us strong.
+          <h1>{t('our_people')}</h1>
+          <h2>{t('car_intro1')}<br />
+          {t('car_intro2')}
           </h2>
-          <h3>JOIN US!</h3>
+          <h3>{t('join_us')}</h3>
           <KeyboardArrowDownIcon
             className="career-intro-btn"
             sx={{ fontSize: 70 }}
@@ -42,20 +41,12 @@ function Careers() {
       </div>
       <div className="career-freshgrad" ref={freshGradRef}>
         <div className="career-freshgrad-content">
-          <div className="career-freshgrad-text">For Fresh Graduates</div>
-          <h3>WE PROVIDE A FIVE-MONTH INTENSIVE TRAINING PROGRAM</h3>
-          <p>
-            The AWS Center for Technology Incubation (ACTION) Training Program is
-            tailored to bridge the knowledge gained from the Academe with the
-            actual needs of the global IT industry.
+          <div className="career-freshgrad-text">{t('career-freshgrad-text')}</div>
+          <h3>{t('career-freshgrad-head')}</h3>
+          <p>{t('career-freshgrad-p1')}<br />
+          {t('career-freshgrad-p2')}
             <br />
-            Its focus is to develop fresh graduates (or with less than 2 years of
-            IT experience) into AWS engineers who have balanced capability in
-            both technical and business skills, on top of being proficient in
-            English.
-            <br />
-            Nihongo proficiency training is also provided to communicate with
-            Japanese clients.
+            {t('career-freshgrad-p3')}
           </p>
           <img alt="action" src={require('../../assets/action.png')} />
           <KeyboardArrowDownIcon
@@ -69,10 +60,10 @@ function Careers() {
       <div className="career-experienced" ref={expRef}>
         <div className="career-background"></div>
         <div className="career-experienced-content">
-          <div className="career-experienced-text">For Experienced Candidates</div>
+          <div className="career-experienced-text">{t('career-experienced-text')}</div>
           <div className="box-group" id="accordion">
             <div className="box-main-title">
-              <span>We are Currently in Need of...</span>
+              <span>{t('career-experienced-head')}</span>
             </div>
             {jobData.map((job, index) => (
               <Disclosure
