@@ -17,6 +17,7 @@
     justify-content: center;
     color: aliceblue;
     text-align: center;
+    z-index: 1;
 }
 
 .home-intro-title h1 {

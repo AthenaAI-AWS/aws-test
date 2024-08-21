@@ -10,13 +10,16 @@ import Services from './components/Services/Services';
 import About from './components/About/About';
 import Careers from './components/Careers/Careers';
 import Company from './components/Company/Company';
-
+import Warn from './Warn'
 
 function App() {
 
   return (
     <div className="App">
-      <Header />
+    <div className="Banner">
+        <Warn/>
+        <Header />
+    </div>
       <main>
         <Routes>
           <Route path="/" element={<Home />} />
